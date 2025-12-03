@@ -2,15 +2,45 @@ using UnityEngine;
 
 public class HurtBox : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private BaseCharacter mCharacter;
+    [SerializeField] private Material normalMat;
+    [SerializeField] private Material attackMat;
+    private Collider mCollider;
+    private MeshRenderer mMeshRenderer;
+
+    public delegate void DisabledAttack();
+    public DisabledAttack onDisableAttack;
+
+    [HideInInspector] public bool isAttacking;
+
+    private void Start()
     {
-        
+        mCollider = GetComponent<Collider>();
+        mMeshRenderer = GetComponent<MeshRenderer>();
+        if(isAttacking) EnableAttack();
+        else DisableAttack();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (!isAttacking) return;
+
+        HitBox otherHitbox = other.GetComponent<HitBox>();
+        if (otherHitbox == null) return;
+        if (otherHitbox.mCharacter == mCharacter) return;
+        otherHitbox.mCharacter.DealDamage(mCharacter, this, otherHitbox);
+    }
+
+    public void EnableAttack()
+    {
+        mMeshRenderer.material = attackMat;
+        isAttacking = true;
+    }
+
+    public void DisableAttack()
+    {
+        mMeshRenderer.material = normalMat;
+        isAttacking = false;
+        onDisableAttack?.Invoke();
     }
 }
