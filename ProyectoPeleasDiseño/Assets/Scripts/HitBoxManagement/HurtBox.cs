@@ -21,7 +21,7 @@ public class HurtBox : MonoBehaviour
         else DisableAttack();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (!isAttacking) return;
 
