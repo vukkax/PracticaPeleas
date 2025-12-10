@@ -124,12 +124,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b20553597cb8c4dbac689a256d0561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitBox
-  mCharacter: {fileID: 0}
+  mCharacter: {fileID: 8411544984512813396}
   normalMat: {fileID: 2100000, guid: 6ea074427c9028249824e075c57acfe3, type: 2}
   blockMat: {fileID: 2100000, guid: 62cb24ddfa410f0488b84b8a2095fd95, type: 2}
   hurtMat: {fileID: 2100000, guid: 765855c3fde94de44804927493e62c84, type: 2}
   blockedMat: {fileID: 2100000, guid: 8ee1a84ba92be064d9b9b1e5679ef8ff, type: 2}
-  mHeight: 1
   isHurt: 0
   isBlocking: 0
   lastHurtBox: {fileID: 0}
@@ -579,9 +578,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bdd69dc412a4e74ab4e89129101d00c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HurtBox
-  mCharacter: {fileID: 0}
+  mCharacter: {fileID: 8411544984512813396}
   normalMat: {fileID: 2100000, guid: 8d82b2e136f3c964b8bace6d96070fa3, type: 2}
   attackMat: {fileID: 2100000, guid: e978cdb5bd20d534e902980bebc54bd7, type: 2}
+  mHeight: 0
   isAttacking: 0
 --- !u!1 &1451842390422602790
 GameObject:
@@ -943,7 +943,7 @@ Transform:
   m_GameObject: {fileID: 1900661145647162463}
   serializedVersion: 2
   m_LocalRotation: {x: 1.7989667e-15, y: -0.0000000010978753, z: -0.0000008681557, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: -0, y: 0.95, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1110,12 +1110,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b20553597cb8c4dbac689a256d0561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitBox
-  mCharacter: {fileID: 0}
+  mCharacter: {fileID: 8411544984512813396}
   normalMat: {fileID: 2100000, guid: 6ea074427c9028249824e075c57acfe3, type: 2}
   blockMat: {fileID: 2100000, guid: 62cb24ddfa410f0488b84b8a2095fd95, type: 2}
   hurtMat: {fileID: 2100000, guid: 765855c3fde94de44804927493e62c84, type: 2}
   blockedMat: {fileID: 2100000, guid: 8ee1a84ba92be064d9b9b1e5679ef8ff, type: 2}
-  mHeight: 0
   isHurt: 0
   isBlocking: 0
   lastHurtBox: {fileID: 0}
@@ -1338,12 +1337,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b20553597cb8c4dbac689a256d0561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitBox
-  mCharacter: {fileID: 0}
+  mCharacter: {fileID: 8411544984512813396}
   normalMat: {fileID: 2100000, guid: 6ea074427c9028249824e075c57acfe3, type: 2}
   blockMat: {fileID: 2100000, guid: 62cb24ddfa410f0488b84b8a2095fd95, type: 2}
   hurtMat: {fileID: 2100000, guid: 765855c3fde94de44804927493e62c84, type: 2}
   blockedMat: {fileID: 2100000, guid: 8ee1a84ba92be064d9b9b1e5679ef8ff, type: 2}
-  mHeight: 1
   isHurt: 0
   isBlocking: 0
   lastHurtBox: {fileID: 0}
@@ -1891,12 +1889,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b20553597cb8c4dbac689a256d0561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitBox
-  mCharacter: {fileID: 0}
+  mCharacter: {fileID: 8411544984512813396}
   normalMat: {fileID: 2100000, guid: 6ea074427c9028249824e075c57acfe3, type: 2}
   blockMat: {fileID: 2100000, guid: 62cb24ddfa410f0488b84b8a2095fd95, type: 2}
   hurtMat: {fileID: 2100000, guid: 765855c3fde94de44804927493e62c84, type: 2}
   blockedMat: {fileID: 2100000, guid: 8ee1a84ba92be064d9b9b1e5679ef8ff, type: 2}
-  mHeight: 1
   isHurt: 0
   isBlocking: 0
   lastHurtBox: {fileID: 0}
@@ -2183,12 +2180,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b20553597cb8c4dbac689a256d0561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitBox
-  mCharacter: {fileID: 0}
+  mCharacter: {fileID: 8411544984512813396}
   normalMat: {fileID: 2100000, guid: 6ea074427c9028249824e075c57acfe3, type: 2}
   blockMat: {fileID: 2100000, guid: 62cb24ddfa410f0488b84b8a2095fd95, type: 2}
   hurtMat: {fileID: 2100000, guid: 765855c3fde94de44804927493e62c84, type: 2}
   blockedMat: {fileID: 2100000, guid: 8ee1a84ba92be064d9b9b1e5679ef8ff, type: 2}
-  mHeight: 1
   isHurt: 0
   isBlocking: 0
   lastHurtBox: {fileID: 0}
@@ -2515,7 +2511,6 @@ MonoBehaviour:
   blockMat: {fileID: 2100000, guid: 62cb24ddfa410f0488b84b8a2095fd95, type: 2}
   hurtMat: {fileID: 2100000, guid: 765855c3fde94de44804927493e62c84, type: 2}
   blockedMat: {fileID: 2100000, guid: 8ee1a84ba92be064d9b9b1e5679ef8ff, type: 2}
-  mHeight: 0
   isHurt: 0
   isBlocking: 0
   lastHurtBox: {fileID: 0}
@@ -3088,9 +3083,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bdd69dc412a4e74ab4e89129101d00c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HurtBox
-  mCharacter: {fileID: 0}
+  mCharacter: {fileID: 8411544984512813396}
   normalMat: {fileID: 2100000, guid: 8d82b2e136f3c964b8bace6d96070fa3, type: 2}
   attackMat: {fileID: 2100000, guid: e978cdb5bd20d534e902980bebc54bd7, type: 2}
+  mHeight: 0
   isAttacking: 0
 --- !u!1 &6413847707763612670
 GameObject:
@@ -3122,7 +3118,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.078, z: -0.149}
-  m_LocalScale: {x: 0.36994064, y: 0.36994064, z: 0.48157823}
+  m_LocalScale: {x: 0.6095512, y: 0.36994064, z: 0.48157823}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7961224741454338595}
@@ -3216,12 +3212,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b20553597cb8c4dbac689a256d0561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitBox
-  mCharacter: {fileID: 0}
+  mCharacter: {fileID: 8411544984512813396}
   normalMat: {fileID: 2100000, guid: 6ea074427c9028249824e075c57acfe3, type: 2}
   blockMat: {fileID: 2100000, guid: 62cb24ddfa410f0488b84b8a2095fd95, type: 2}
   hurtMat: {fileID: 2100000, guid: 765855c3fde94de44804927493e62c84, type: 2}
   blockedMat: {fileID: 2100000, guid: 8ee1a84ba92be064d9b9b1e5679ef8ff, type: 2}
-  mHeight: 2
   isHurt: 0
   isBlocking: 0
   lastHurtBox: {fileID: 0}
@@ -3381,12 +3376,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b20553597cb8c4dbac689a256d0561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitBox
-  mCharacter: {fileID: 0}
+  mCharacter: {fileID: 8411544984512813396}
   normalMat: {fileID: 2100000, guid: 6ea074427c9028249824e075c57acfe3, type: 2}
   blockMat: {fileID: 2100000, guid: 62cb24ddfa410f0488b84b8a2095fd95, type: 2}
   hurtMat: {fileID: 2100000, guid: 765855c3fde94de44804927493e62c84, type: 2}
   blockedMat: {fileID: 2100000, guid: 8ee1a84ba92be064d9b9b1e5679ef8ff, type: 2}
-  mHeight: 1
   isHurt: 0
   isBlocking: 0
   lastHurtBox: {fileID: 0}
@@ -3577,12 +3571,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b20553597cb8c4dbac689a256d0561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitBox
-  mCharacter: {fileID: 0}
+  mCharacter: {fileID: 8411544984512813396}
   normalMat: {fileID: 2100000, guid: 6ea074427c9028249824e075c57acfe3, type: 2}
   blockMat: {fileID: 2100000, guid: 62cb24ddfa410f0488b84b8a2095fd95, type: 2}
   hurtMat: {fileID: 2100000, guid: 765855c3fde94de44804927493e62c84, type: 2}
   blockedMat: {fileID: 2100000, guid: 8ee1a84ba92be064d9b9b1e5679ef8ff, type: 2}
-  mHeight: 0
   isHurt: 0
   isBlocking: 0
   lastHurtBox: {fileID: 0}
@@ -3870,9 +3863,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bdd69dc412a4e74ab4e89129101d00c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HurtBox
-  mCharacter: {fileID: 0}
+  mCharacter: {fileID: 8411544984512813396}
   normalMat: {fileID: 2100000, guid: 8d82b2e136f3c964b8bace6d96070fa3, type: 2}
   attackMat: {fileID: 2100000, guid: e978cdb5bd20d534e902980bebc54bd7, type: 2}
+  mHeight: 0
   isAttacking: 0
 --- !u!1 &7255603430386325694
 GameObject:
@@ -4097,9 +4091,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bdd69dc412a4e74ab4e89129101d00c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HurtBox
-  mCharacter: {fileID: 0}
+  mCharacter: {fileID: 8411544984512813396}
   normalMat: {fileID: 2100000, guid: 8d82b2e136f3c964b8bace6d96070fa3, type: 2}
   attackMat: {fileID: 2100000, guid: e978cdb5bd20d534e902980bebc54bd7, type: 2}
+  mHeight: 0
   isAttacking: 0
 --- !u!1 &7418298428327660448
 GameObject:
@@ -4326,12 +4321,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3b20553597cb8c4dbac689a256d0561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HitBox
-  mCharacter: {fileID: 0}
+  mCharacter: {fileID: 8411544984512813396}
   normalMat: {fileID: 2100000, guid: 6ea074427c9028249824e075c57acfe3, type: 2}
   blockMat: {fileID: 2100000, guid: 62cb24ddfa410f0488b84b8a2095fd95, type: 2}
   hurtMat: {fileID: 2100000, guid: 765855c3fde94de44804927493e62c84, type: 2}
   blockedMat: {fileID: 2100000, guid: 8ee1a84ba92be064d9b9b1e5679ef8ff, type: 2}
-  mHeight: 0
   isHurt: 0
   isBlocking: 0
   lastHurtBox: {fileID: 0}
@@ -4647,7 +4641,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9163019988729330100}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.92387956, z: -0, w: 0.38268343}
+  m_LocalRotation: {x: 0, y: 0.92387956, z: 0, w: 0.38268343}
   m_LocalPosition: {x: -4, y: 0.06, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4655,7 +4649,7 @@ Transform:
   - {fileID: 6798935485055911955}
   - {fileID: 8534149589567386834}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 135, z: 0}
 --- !u!95 &1385509882683311215
 Animator:
   serializedVersion: 7
@@ -4669,7 +4663,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 5217903caf78cf943b90b12016367041, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
@@ -4695,7 +4689,25 @@ MonoBehaviour:
   attackDamage: 1.15
   defense: 1.2
   maxHealth: 150
+  m_upHurtBoxes:
+  - {fileID: 7565065169224062249}
+  m_midHurtBoxes:
+  - {fileID: 7565065169224062249}
+  m_downHurtBoxes:
+  - {fileID: 4507661386610223218}
+  m_blockHitBoxes:
+  - {fileID: 6602918102036716622}
+  - {fileID: 5853355902544898445}
+  - {fileID: 4561794735801101534}
+  - {fileID: 3413023778022571691}
+  - {fileID: 5109069952256713773}
+  - {fileID: 2136649088004449749}
+  - {fileID: 5006987217692462800}
+  - {fileID: 6806809394188065773}
+  - {fileID: 923188252914048062}
+  - {fileID: 2248219034185639877}
   m_anim: {fileID: 1385509882683311215}
+  isDummy: 0
 --- !u!65 &2264763106639262517
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4715,8 +4727,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 2, z: 0.75792235}
-  m_Center: {x: -1.9656236e-16, y: 1, z: 0.04508184}
+  m_Size: {x: 1, y: 1.9234142, z: 0.75792235}
+  m_Center: {x: -0.0000000023318782, y: 1.0382929, z: 0.045081854}
 --- !u!54 &9063882749019015106
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4739,8 +4751,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 124
   m_CollisionDetection: 0
