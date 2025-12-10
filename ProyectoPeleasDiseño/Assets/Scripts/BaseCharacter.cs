@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Rendering;
+using Slider = UnityEngine.UI.Slider;
 
 public class BaseCharacter : MonoBehaviour
 {
@@ -8,9 +8,10 @@ public class BaseCharacter : MonoBehaviour
     public float moveSpeed = 5;
     private bool isAttacking = false;
     public float attackDamage = 1.15f;
-    public float defense = 1.2f;
-    public int maxHealth = 150;
-    private int currentHealth;
+    [Range(0,1)]public float defense;
+    public float maxHealth = 150;
+    [SerializeField] private float currentHealth;
+    private bool isDead;
     private HurtBox lastHurtBox;
     private bool canMove = true;
     private Rigidbody m_rb;
@@ -26,16 +27,23 @@ public class BaseCharacter : MonoBehaviour
     [SerializeField] private HitBox[] m_blockHitBoxes;
     public Animator m_anim;
     [SerializeField] private bool isDummy;
+
+    [Header("UI")] [SerializeField] 
+    private Slider healthBar;
+    public float healthBarSpeed;
     private void Start()
     {
-        if (isDummy) return;
         currentHealth = maxHealth;
+        healthBar.maxValue = maxHealth;
+        healthBar.value = currentHealth;
+        if (isDummy) return;
         m_rb = GetComponent<Rigidbody>();
         m_anim.SetFloat("AnimSpeed", animSpeed);
     }
 
     private void Update()
     {
+        healthBar.value = Mathf.Lerp(healthBar.value, currentHealth, healthBarSpeed * Time.deltaTime);
         if (isDummy) return;
         if (Input.GetKey(KeyCode.D) & canMove)
         {
@@ -122,6 +130,7 @@ public class BaseCharacter : MonoBehaviour
         {
             hurtBox.EnableAttack();
             hurtBox.mHeight = 2;
+            hurtBox.mDamage = topAttackDamage;
         }
     }
 
@@ -139,6 +148,7 @@ public class BaseCharacter : MonoBehaviour
         {
             hurtBox.EnableAttack();
             hurtBox.mHeight = 1;
+            hurtBox.mDamage = midAttackDamage;
         }
     }
 
@@ -156,6 +166,7 @@ public class BaseCharacter : MonoBehaviour
         {
             hurtBox.EnableAttack();
             hurtBox.mHeight = 0;
+            hurtBox.mDamage = downAttackDamage;
         }
     }
 
@@ -185,6 +196,7 @@ public class BaseCharacter : MonoBehaviour
 
     public void DealDamage(BaseCharacter attackingCharacter, HurtBox hurtBox, HitBox hitBox)
     {
+        if (isDead) return;
         if(lastHurtBox == hurtBox) return;
 
         lastHurtBox = hurtBox;
@@ -200,12 +212,21 @@ public class BaseCharacter : MonoBehaviour
             Debug.Log("Blocked on height " + hurtBox.mHeight);
             attackingCharacter.YouGotBlocked(hurtBox.mHeight);
         }
-        else 
+        else
         {
-            Debug.Log("Hit on height " + hurtBox.mHeight);
+            m_anim.SetTrigger("Hit");
+            Debug.Log("Hit on height " + hurtBox.mHeight); 
+            currentHealth -= (hurtBox.mDamage - (hurtBox.mDamage * defense));
+            if (currentHealth <= 0) Death();
         }  
     }
 
+    private void Death()
+    {
+        currentHealth = 0;
+        isDead = true;
+    }
+    
     public void ForgetLastHurtBox()
     {
         lastHurtBox.onDisableAttack -= ForgetLastHurtBox;
