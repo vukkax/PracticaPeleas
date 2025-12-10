@@ -775,6 +775,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2914024272917470131}
   - component: {fileID: 1849470687976637149}
+  - component: {fileID: 5966010014088626575}
   m_Layer: 0
   m_Name: Dummy
   m_TagString: Untagged
@@ -821,6 +822,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5966010014088626575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2982732850426046984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a42dd11d3c77324f9898c2359c1d5a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BaseCharacter
+  animSpeed: 1
+  moveSpeed: 5
+  attackDamage: 0.8
+  defense: 0.89
+  maxHealth: 150
+  topAttackDamage: 10
+  midAttackDamage: 10
+  downAttackDamage: 10
+  topBlockStopFrames: 0
+  midBlockStopFrames: 0
+  downBlockStopFrames: 0
+  m_upHurtBoxes: []
+  m_midHurtBoxes: []
+  m_downHurtBoxes: []
+  m_blockHitBoxes: []
+  m_anim: {fileID: 1849470687976637149}
+  isDummy: 1
 --- !u!1 &3004175825863164129
 GameObject:
   m_ObjectHideFlags: 0
@@ -2309,6 +2339,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2056554101698306675}
     m_Modifications:
+    - target: {fileID: 5469810015517117461, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
+      propertyPath: mCharacter
+      value: 
+      objectReference: {fileID: 5966010014088626575}
     - target: {fileID: 5888472366288263381, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.14221
@@ -2383,6 +2417,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8061310615558240943}
     m_Modifications:
+    - target: {fileID: 5469810015517117461, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
+      propertyPath: mCharacter
+      value: 
+      objectReference: {fileID: 5966010014088626575}
     - target: {fileID: 5888472366288263381, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1105
@@ -2457,6 +2495,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3277118585861014122}
     m_Modifications:
+    - target: {fileID: 5469810015517117461, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
+      propertyPath: mCharacter
+      value: 
+      objectReference: {fileID: 5966010014088626575}
     - target: {fileID: 5888472366288263381, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.14709
@@ -2531,6 +2573,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1207215595976659033}
     m_Modifications:
+    - target: {fileID: 5469810015517117461, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
+      propertyPath: mCharacter
+      value: 
+      objectReference: {fileID: 5966010014088626575}
     - target: {fileID: 5888472366288263381, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.110499986
@@ -2605,6 +2651,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3913851552848479008}
     m_Modifications:
+    - target: {fileID: 5469810015517117461, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
+      propertyPath: mCharacter
+      value: 
+      objectReference: {fileID: 5966010014088626575}
     - target: {fileID: 5888472366288263381, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.15366389
@@ -2679,6 +2729,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4874133557402613685}
     m_Modifications:
+    - target: {fileID: 5469810015517117461, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
+      propertyPath: mCharacter
+      value: 
+      objectReference: {fileID: 5966010014088626575}
     - target: {fileID: 5888472366288263381, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.2864
@@ -2753,6 +2807,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5700361857378350632}
     m_Modifications:
+    - target: {fileID: 5469810015517117461, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
+      propertyPath: mCharacter
+      value: 
+      objectReference: {fileID: 5966010014088626575}
     - target: {fileID: 5888472366288263381, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.15026
@@ -2827,6 +2885,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1261339725587740029}
     m_Modifications:
+    - target: {fileID: 5469810015517117461, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
+      propertyPath: mCharacter
+      value: 
+      objectReference: {fileID: 5966010014088626575}
     - target: {fileID: 5888472366288263381, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.14220998
@@ -2901,6 +2963,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7129256713086626986}
     m_Modifications:
+    - target: {fileID: 5469810015517117461, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
+      propertyPath: mCharacter
+      value: 
+      objectReference: {fileID: 5966010014088626575}
     - target: {fileID: 5888472366288263381, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1345679
@@ -2975,6 +3041,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8257873164883083263}
     m_Modifications:
+    - target: {fileID: 5469810015517117461, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
+      propertyPath: mCharacter
+      value: 
+      objectReference: {fileID: 5966010014088626575}
     - target: {fileID: 5888472366288263381, guid: 7780274aa2b3b8c4590ecfeeaa55dc8a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.15366389
