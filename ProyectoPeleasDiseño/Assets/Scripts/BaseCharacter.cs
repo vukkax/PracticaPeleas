@@ -38,7 +38,7 @@ public class BaseCharacter : MonoBehaviour
         healthBar.value = currentHealth;
         if (isDummy) return;
         m_rb = GetComponent<Rigidbody>();
-        m_anim.SetFloat("AnimSpeed", animSpeed);
+        m_anim.SetFloat($"AnimSpeed", animSpeed);
     }
 
     private void Update()
@@ -48,39 +48,39 @@ public class BaseCharacter : MonoBehaviour
         if (Input.GetKey(KeyCode.D) & canMove)
         {
             Move(false);
-            m_anim.SetBool("IsMoving",true);
-            m_anim.SetBool("MovingBack", false);
+            m_anim.SetBool($"IsMoving",true);
+            m_anim.SetBool($"MovingBack", false);
         }
         else if (Input.GetKey(KeyCode.A) & canMove)
         {
             Move(true);
-            m_anim.SetBool("IsMoving", true);
-            m_anim.SetBool("MovingBack", true);
+            m_anim.SetBool($"IsMoving", true);
+            m_anim.SetBool($"MovingBack", true);
         }
         else 
         {
-            m_anim.SetBool("IsMoving", false);
+            m_anim.SetBool($"IsMoving", false);
         }
 
         if (Input.GetKeyDown(KeyCode.Q) & !isAttacking)
         {
             isAttacking = true;
             canMove = false;
-            m_anim.SetTrigger("UpAttack");
+            m_anim.SetTrigger($"UpAttack");
         }
 
         if (Input.GetKeyDown(KeyCode.W) & !isAttacking)
         {
             isAttacking = true;
             canMove = false;
-            m_anim.SetTrigger("MidAttack");
+            m_anim.SetTrigger($"MidAttack");
         }
 
         if (Input.GetKeyDown(KeyCode.E) & !isAttacking)
         {
             isAttacking = true;
             canMove = false;
-            m_anim.SetTrigger("DownAttack");
+            m_anim.SetTrigger($"DownAttack");
         }
     }
 
@@ -106,9 +106,9 @@ public class BaseCharacter : MonoBehaviour
         Debug.Log("Frames " + frames);
         float seconds = frames * 0.034f;
         Debug.Log("Seconds "+ seconds);
-        m_anim.SetFloat("AnimSpeed", 0);
+        m_anim.SetFloat($"AnimSpeed", 0);
         yield return new WaitForSecondsRealtime(seconds);
-        m_anim.SetFloat("AnimSpeed", animSpeed);
+        m_anim.SetFloat($"AnimSpeed", animSpeed);
     }
 
     public void EndAttack()
@@ -214,7 +214,7 @@ public class BaseCharacter : MonoBehaviour
         }
         else
         {
-            m_anim.SetTrigger("Hit");
+            m_anim.SetTrigger($"Hit");
             Debug.Log("Hit on height " + hurtBox.mHeight); 
             currentHealth -= (hurtBox.mDamage - (hurtBox.mDamage * defense));
             if (currentHealth <= 0) Death();
@@ -225,6 +225,7 @@ public class BaseCharacter : MonoBehaviour
     {
         currentHealth = 0;
         isDead = true;
+        m_anim.SetTrigger($"Die");
     }
     
     public void ForgetLastHurtBox()
