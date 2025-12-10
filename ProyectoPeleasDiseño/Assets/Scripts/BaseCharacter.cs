@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -13,17 +14,24 @@ public class BaseCharacter : MonoBehaviour
     private HurtBox lastHurtBox;
     private bool canMove = true;
     private Rigidbody m_rb;
+    public float topAttackDamage = 10f;
+    public float midAttackDamage = 10f;
+    public float downAttackDamage = 10f;
+    [SerializeField] private int topBlockStopFrames;
+    [SerializeField] private int midBlockStopFrames;
+    [SerializeField] private int downBlockStopFrames;
     [SerializeField] private HurtBox[] m_upHurtBoxes;
     [SerializeField] private HurtBox[] m_midHurtBoxes;
     [SerializeField] private HurtBox[] m_downHurtBoxes;
     [SerializeField] private HitBox[] m_blockHitBoxes;
-    [SerializeField] private Animator m_anim;
+    public Animator m_anim;
     [SerializeField] private bool isDummy;
     private void Start()
     {
         if (isDummy) return;
         currentHealth = maxHealth;
         m_rb = GetComponent<Rigidbody>();
+        m_anim.SetFloat("AnimSpeed", animSpeed);
     }
 
     private void Update()
@@ -66,6 +74,33 @@ public class BaseCharacter : MonoBehaviour
             canMove = false;
             m_anim.SetTrigger("DownAttack");
         }
+    }
+
+    public void YouGotBlocked(int height)
+    {
+        Debug.Log("Stop Block");
+        if(height == 0)
+        {
+            StartCoroutine(BlockStop(downBlockStopFrames));
+        }
+        else if (height == 1)
+        {
+            StartCoroutine(BlockStop(midBlockStopFrames));
+        }
+        else
+        {
+            StartCoroutine(BlockStop(topBlockStopFrames));
+        }
+    }
+
+    IEnumerator BlockStop(int frames)
+    {
+        Debug.Log("Frames " + frames);
+        float seconds = frames * 0.034f;
+        Debug.Log("Seconds "+ seconds);
+        m_anim.SetFloat("AnimSpeed", 0);
+        yield return new WaitForSecondsRealtime(seconds);
+        m_anim.SetFloat("AnimSpeed", animSpeed);
     }
 
     public void EndAttack()
@@ -163,6 +198,7 @@ public class BaseCharacter : MonoBehaviour
         if (hitBox.isBlocking)
         {
             Debug.Log("Blocked on height " + hurtBox.mHeight);
+            attackingCharacter.YouGotBlocked(hurtBox.mHeight);
         }
         else 
         {

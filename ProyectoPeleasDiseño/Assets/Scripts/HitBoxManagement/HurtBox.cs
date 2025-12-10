@@ -12,6 +12,7 @@ public class HurtBox : MonoBehaviour
     public DisabledAttack onDisableAttack;
 
     [HideInInspector] public int mHeight;
+    [HideInInspector] public int mDamage;
     [HideInInspector] public bool isAttacking;
 
     private void Start()

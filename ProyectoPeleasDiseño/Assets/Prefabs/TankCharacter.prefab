@@ -582,6 +582,7 @@ MonoBehaviour:
   normalMat: {fileID: 2100000, guid: 8d82b2e136f3c964b8bace6d96070fa3, type: 2}
   attackMat: {fileID: 2100000, guid: e978cdb5bd20d534e902980bebc54bd7, type: 2}
   mHeight: 0
+  mDamage: 0
   isAttacking: 0
 --- !u!1 &1451842390422602790
 GameObject:
@@ -3087,6 +3088,7 @@ MonoBehaviour:
   normalMat: {fileID: 2100000, guid: 8d82b2e136f3c964b8bace6d96070fa3, type: 2}
   attackMat: {fileID: 2100000, guid: e978cdb5bd20d534e902980bebc54bd7, type: 2}
   mHeight: 0
+  mDamage: 0
   isAttacking: 0
 --- !u!1 &6413847707763612670
 GameObject:
@@ -3867,6 +3869,7 @@ MonoBehaviour:
   normalMat: {fileID: 2100000, guid: 8d82b2e136f3c964b8bace6d96070fa3, type: 2}
   attackMat: {fileID: 2100000, guid: e978cdb5bd20d534e902980bebc54bd7, type: 2}
   mHeight: 0
+  mDamage: 0
   isAttacking: 0
 --- !u!1 &7255603430386325694
 GameObject:
@@ -4095,6 +4098,7 @@ MonoBehaviour:
   normalMat: {fileID: 2100000, guid: 8d82b2e136f3c964b8bace6d96070fa3, type: 2}
   attackMat: {fileID: 2100000, guid: e978cdb5bd20d534e902980bebc54bd7, type: 2}
   mHeight: 0
+  mDamage: 0
   isAttacking: 0
 --- !u!1 &7418298428327660448
 GameObject:
@@ -4689,6 +4693,12 @@ MonoBehaviour:
   attackDamage: 1.15
   defense: 1.2
   maxHealth: 150
+  topAttackDamage: 10
+  midAttackDamage: 10
+  downAttackDamage: 10
+  topBlockStopFrames: 15
+  midBlockStopFrames: 11
+  downBlockStopFrames: 10
   m_upHurtBoxes:
   - {fileID: 7565065169224062249}
   m_midHurtBoxes:

@@ -171,6 +171,12 @@ MonoBehaviour:
   attackDamage: 0.8
   defense: 0.89
   maxHealth: 150
+  topAttackDamage: 10
+  midAttackDamage: 10
+  downAttackDamage: 10
+  topBlockStopFrames: 0
+  midBlockStopFrames: 0
+  downBlockStopFrames: 0
   m_upHurtBoxes: []
   m_midHurtBoxes: []
   m_downHurtBoxes: []
@@ -899,6 +905,10 @@ PrefabInstance:
     - target: {fileID: 3598511377105376072, guid: 564ff8825a196f548a57659051f372cf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8411544984512813396, guid: 564ff8825a196f548a57659051f372cf, type: 3}
+      propertyPath: animSpeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9163019988729330100, guid: 564ff8825a196f548a57659051f372cf, type: 3}
       propertyPath: m_Name
