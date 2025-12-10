@@ -86,6 +86,7 @@ public class BaseCharacter : MonoBehaviour
         foreach (HurtBox hurtBox in m_upHurtBoxes)
         {
             hurtBox.EnableAttack();
+            hurtBox.mHeight = 2;
         }
     }
 
@@ -102,6 +103,7 @@ public class BaseCharacter : MonoBehaviour
         foreach (HurtBox hurtBox in m_midHurtBoxes)
         {
             hurtBox.EnableAttack();
+            hurtBox.mHeight = 1;
         }
     }
 
@@ -118,6 +120,7 @@ public class BaseCharacter : MonoBehaviour
         foreach (HurtBox hurtBox in m_downHurtBoxes)
         {
             hurtBox.EnableAttack();
+            hurtBox.mHeight = 0;
         }
     }
 
@@ -159,11 +162,11 @@ public class BaseCharacter : MonoBehaviour
 
         if (hitBox.isBlocking)
         {
-            Debug.Log("Blocked on height " + hitBox.mHeight);
+            Debug.Log("Blocked on height " + hurtBox.mHeight);
         }
         else 
         {
-            Debug.Log("Hit on height " + hitBox.mHeight);
+            Debug.Log("Hit on height " + hurtBox.mHeight);
         }  
     }
 

@@ -11,6 +11,7 @@ public class HurtBox : MonoBehaviour
     public delegate void DisabledAttack();
     public DisabledAttack onDisableAttack;
 
+    [HideInInspector] public int mHeight;
     [HideInInspector] public bool isAttacking;
 
     private void Start()

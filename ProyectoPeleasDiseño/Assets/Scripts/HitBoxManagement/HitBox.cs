@@ -11,7 +11,7 @@ public class HitBox : MonoBehaviour
     [SerializeField] Material blockMat;
     [SerializeField] Material hurtMat;
     [SerializeField] Material blockedMat;
-    public int mHeight;
+
 
     [HideInInspector] public bool isHurt;
     [HideInInspector] public bool isBlocking;
