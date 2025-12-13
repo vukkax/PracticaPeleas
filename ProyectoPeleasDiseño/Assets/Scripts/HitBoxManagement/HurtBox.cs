@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class HurtBox : MonoBehaviour
 {
@@ -32,6 +33,12 @@ public class HurtBox : MonoBehaviour
         if (otherHitbox == null) return;
         if (otherHitbox.mCharacter == mCharacter) return;
         otherHitbox.mCharacter.DealDamage(mCharacter, this, otherHitbox);
+    }
+
+    public void MeshEnable(bool enabled)
+    {
+        if (mMeshRenderer == null) return;
+        mMeshRenderer.enabled = enabled;
     }
 
     public void EnableAttack()

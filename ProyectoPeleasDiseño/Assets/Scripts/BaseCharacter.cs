@@ -27,6 +27,8 @@ public class BaseCharacter : MonoBehaviour
     [SerializeField] private HitBox[] m_blockHitBoxes;
     public Animator m_anim;
     [SerializeField] private bool isDummy;
+    private bool isBlocking;
+    private int blockHeight;
 
     [Header("UI")] [SerializeField] 
     private Slider healthBar;
@@ -36,9 +38,12 @@ public class BaseCharacter : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.maxValue = maxHealth;
         healthBar.value = currentHealth;
-        if (isDummy) return;
         m_rb = GetComponent<Rigidbody>();
         m_anim.SetFloat($"AnimSpeed", animSpeed);
+        if (isDummy)
+        {
+            Block(true,2);
+        }
     }
 
     private void Update()
@@ -81,6 +86,21 @@ public class BaseCharacter : MonoBehaviour
             isAttacking = true;
             canMove = false;
             m_anim.SetTrigger($"DownAttack");
+        }
+    }
+
+    public void Block(bool isOn, int height)
+    {
+        if (isOn)
+        {
+            m_anim.SetBool($"IsBlocking", true);
+            isBlocking = true;
+            blockHeight = height;
+        }
+        else
+        {
+            m_anim.SetBool($"IsBlocking", false);
+            isBlocking = false;
         }
     }
 
@@ -207,7 +227,7 @@ public class BaseCharacter : MonoBehaviour
 
         hitBox.EnableHurt();
 
-        if (hitBox.isBlocking)
+        if (isBlocking & blockHeight==hurtBox.mHeight)
         {
             Debug.Log("Blocked on height " + hurtBox.mHeight);
             attackingCharacter.YouGotBlocked(hurtBox.mHeight);

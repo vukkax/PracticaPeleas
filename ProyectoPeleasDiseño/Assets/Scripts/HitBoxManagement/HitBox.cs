@@ -24,6 +24,11 @@ public class HitBox : MonoBehaviour
         ManageMaterial();
     }
 
+    public void MeshEnable(bool enabled)
+    {
+        if(mRenderer == null) return;
+        mRenderer.enabled = enabled;
+    }
     public void EnableHurt()
     {
         isHurt = true;
