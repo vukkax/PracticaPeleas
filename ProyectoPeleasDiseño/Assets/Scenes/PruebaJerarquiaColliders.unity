@@ -2820,6 +2820,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1373016629}
     - target: {fileID: 5966010014088626575, guid: 5669ad958fd4df546aacab5ea2890dca, type: 3}
+      propertyPath: dmgNum
+      value: 
+      objectReference: {fileID: 5976543376841986429, guid: 3a4811560b593fa4bb83e03542668ee7, type: 3}
+    - target: {fileID: 5966010014088626575, guid: 5669ad958fd4df546aacab5ea2890dca, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 2016412901}
@@ -3843,6 +3847,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8411544984512813396, guid: 564ff8825a196f548a57659051f372cf, type: 3}
+      propertyPath: dmgNum
+      value: 
+      objectReference: {fileID: 5976543376841986429, guid: 3a4811560b593fa4bb83e03542668ee7, type: 3}
     - target: {fileID: 8411544984512813396, guid: 564ff8825a196f548a57659051f372cf, type: 3}
       propertyPath: healthBar
       value: 

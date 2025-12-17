@@ -17,7 +17,6 @@ public class HurtBox : MonoBehaviour
     [HideInInspector] public float mDamage;
     [HideInInspector] public bool isAttacking;
     [HideInInspector] public int attackType;
-
     
 
     private void Start()

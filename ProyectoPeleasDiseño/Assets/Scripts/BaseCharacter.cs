@@ -33,8 +33,14 @@ public class BaseCharacter : MonoBehaviour
     [Header("UI")] [SerializeField] 
     private Slider healthBar;
     public float healthBarSpeed;
+
+
+    [Header("Damage Numbers")] 
+    [SerializeField] private GameObject dmgNum;
+    private Camera mainCam;
     private void Start()
     {
+        mainCam = Camera.main;
         currentHealth = maxHealth;
         healthBar.maxValue = maxHealth;
         healthBar.value = currentHealth;
@@ -276,16 +282,21 @@ public class BaseCharacter : MonoBehaviour
 
         hitBox.EnableHurt();
 
+        var num = Instantiate(dmgNum, mainCam.WorldToScreenPoint(hurtBox.transform.position), dmgNum.transform.rotation).GetComponentInChildren<DamageNum>();
+        num.gameObject.transform.GetChild(0).transform.position =
+            mainCam.WorldToScreenPoint(hurtBox.transform.position);
         if ((isBlocking & blockHeight==hurtBox.mHeight) || (isBlocking & hurtBox.mHeight == 1))
         {
             Debug.Log("Blocked on height " + hurtBox.mHeight);
             attackingCharacter.YouGotBlocked(hurtBox.mHeight);
+            if(num) num.SetText($"Blocked");
         }
         else
         {
             m_anim.SetTrigger($"Hit");
             Debug.Log("Hit on height " + hurtBox.mHeight); 
             currentHealth -= (hurtBox.mDamage - (hurtBox.mDamage * defense));
+            if(num) num.SetText($"-{hurtBox.mDamage}");
             if (currentHealth <= 0) Death();
         }  
     }

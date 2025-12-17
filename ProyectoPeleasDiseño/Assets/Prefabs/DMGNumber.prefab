@@ -100,7 +100,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -291,8 +291,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageNum
   tmpProComponent: {fileID: 6280603021252926945}
-  timeUntilFade: 3
-  verticalSpeed: 14
+  timeUntilFade: 1.6
+  verticalSpeed: 50
   animCurve:
     serializedVersion: 2
     m_Curve:
