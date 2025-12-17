@@ -1558,7 +1558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51ef966185f0380418c0be8e762aa5cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  healthSlider: {fileID: 2016412901}
+  otherSlider: {fileID: 2016412901}
 --- !u!1 &753791112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1661,7 +1661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51ef966185f0380418c0be8e762aa5cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LerpSlider
-  healthSlider: {fileID: 1300897385}
+  otherSlider: {fileID: 1300897385}
 --- !u!1 &805077697
 GameObject:
   m_ObjectHideFlags: 0
