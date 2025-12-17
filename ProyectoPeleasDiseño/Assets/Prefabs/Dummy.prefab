@@ -839,7 +839,7 @@ MonoBehaviour:
   moveSpeed: 5
   attackDamage: 0.8
   defense: 0
-  maxHealth: 150
+  maxHealth: 90
   currentHealth: 0
   topAttackDamage: 7
   midAttackDamage: 5
