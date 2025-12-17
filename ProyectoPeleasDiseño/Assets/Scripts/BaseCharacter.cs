@@ -42,10 +42,33 @@ public class BaseCharacter : MonoBehaviour
         m_anim.SetFloat($"AnimSpeed", animSpeed);
         if (isDummy)
         {
-            Block(true,2);
+            //StartCoroutine(DummieRotation());
         }
     }
 
+    IEnumerator DummieRotation()
+    {
+        Block(true, 2);
+        yield return new WaitForSeconds(5);
+        Block(true, 0);
+        yield return new WaitForSeconds(5);
+        Block(false, 0);
+        isAttacking = true;
+        canMove = false;
+        m_anim.SetTrigger($"MidAttack");
+        yield return new WaitForSeconds(5);
+        StartCoroutine(DummieRotation());
+    }
+
+    public void MidAttack()
+    {
+        if (!isAttacking)
+        {
+            isAttacking = true;
+            canMove = false;
+            m_anim.SetTrigger($"MidAttack");
+        }
+    }
     private void Update()
     {
         healthBar.value = Mathf.Lerp(healthBar.value, currentHealth, healthBarSpeed * Time.deltaTime);
@@ -96,6 +119,14 @@ public class BaseCharacter : MonoBehaviour
             m_anim.SetBool($"IsBlocking", true);
             isBlocking = true;
             blockHeight = height;
+            if(height == 2)
+            {
+                m_anim.SetBool($"BlockUp", true );
+            }
+            else if (height == 0)
+            {
+                m_anim.SetBool($"BlockUp", false);
+            }
         }
         else
         {
@@ -148,6 +179,7 @@ public class BaseCharacter : MonoBehaviour
     {
         foreach (HurtBox hurtBox in m_upHurtBoxes)
         {
+            Block(false, 0);
             hurtBox.EnableAttack();
             hurtBox.mHeight = 2;
             hurtBox.mDamage = topAttackDamage;
@@ -166,6 +198,7 @@ public class BaseCharacter : MonoBehaviour
     {
         foreach (HurtBox hurtBox in m_midHurtBoxes)
         {
+            Block(false,0);
             hurtBox.EnableAttack();
             hurtBox.mHeight = 1;
             hurtBox.mDamage = midAttackDamage;
@@ -184,6 +217,7 @@ public class BaseCharacter : MonoBehaviour
     {
         foreach (HurtBox hurtBox in m_downHurtBoxes)
         {
+            Block(false, 0);
             hurtBox.EnableAttack();
             hurtBox.mHeight = 0;
             hurtBox.mDamage = downAttackDamage;
@@ -198,6 +232,21 @@ public class BaseCharacter : MonoBehaviour
         }
     }
 
+
+    public void BlockUp()
+    {
+        Block(true, 2);
+    }
+
+    public void BlockDown()
+    {
+        Block(true, 0);
+    }
+
+    public void Unblock()
+    {
+        Block(false, 0);
+    }
     public void BlockEnable()
     {
         foreach(HitBox hitBox in m_blockHitBoxes)
@@ -227,7 +276,7 @@ public class BaseCharacter : MonoBehaviour
 
         hitBox.EnableHurt();
 
-        if (isBlocking & blockHeight==hurtBox.mHeight)
+        if ((isBlocking & blockHeight==hurtBox.mHeight) || (isBlocking & blockHeight == 1))
         {
             Debug.Log("Blocked on height " + hurtBox.mHeight);
             attackingCharacter.YouGotBlocked(hurtBox.mHeight);

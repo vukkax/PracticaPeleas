@@ -584,6 +584,7 @@ MonoBehaviour:
   mHeight: 0
   mDamage: 0
   isAttacking: 0
+  attackType: 0
 --- !u!1 &1451842390422602790
 GameObject:
   m_ObjectHideFlags: 0
@@ -3090,6 +3091,7 @@ MonoBehaviour:
   mHeight: 0
   mDamage: 0
   isAttacking: 0
+  attackType: 0
 --- !u!1 &6413847707763612670
 GameObject:
   m_ObjectHideFlags: 0
@@ -3871,6 +3873,7 @@ MonoBehaviour:
   mHeight: 0
   mDamage: 0
   isAttacking: 0
+  attackType: 0
 --- !u!1 &7255603430386325694
 GameObject:
   m_ObjectHideFlags: 0
@@ -4100,6 +4103,7 @@ MonoBehaviour:
   mHeight: 0
   mDamage: 0
   isAttacking: 0
+  attackType: 0
 --- !u!1 &7418298428327660448
 GameObject:
   m_ObjectHideFlags: 0
@@ -4688,14 +4692,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a42dd11d3c77324f9898c2359c1d5a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BaseCharacter
-  animSpeed: 1
+  animSpeed: 0.9
   moveSpeed: 5
   attackDamage: 1.15
-  defense: 1.2
+  defense: 0.11
   maxHealth: 150
+  currentHealth: 0
   topAttackDamage: 10
-  midAttackDamage: 10
-  downAttackDamage: 10
+  midAttackDamage: 7
+  downAttackDamage: 5
   topBlockStopFrames: 15
   midBlockStopFrames: 11
   downBlockStopFrames: 10
@@ -4718,6 +4723,8 @@ MonoBehaviour:
   - {fileID: 2248219034185639877}
   m_anim: {fileID: 1385509882683311215}
   isDummy: 0
+  healthBar: {fileID: 0}
+  healthBarSpeed: 0
 --- !u!65 &2264763106639262517
 BoxCollider:
   m_ObjectHideFlags: 0
