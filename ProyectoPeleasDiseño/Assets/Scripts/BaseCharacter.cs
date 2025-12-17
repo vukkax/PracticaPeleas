@@ -276,7 +276,7 @@ public class BaseCharacter : MonoBehaviour
 
         hitBox.EnableHurt();
 
-        if ((isBlocking & blockHeight==hurtBox.mHeight) || (isBlocking & blockHeight == 1))
+        if ((isBlocking & blockHeight==hurtBox.mHeight) || (isBlocking & hurtBox.mHeight == 1))
         {
             Debug.Log("Blocked on height " + hurtBox.mHeight);
             attackingCharacter.YouGotBlocked(hurtBox.mHeight);
