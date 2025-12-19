@@ -5,6 +5,10 @@ public class ToggleHitBoxes : MonoBehaviour
     private HitBox[] hitBoxes;
     private HurtBox[] hurtBoxes;
     bool isOn = true;
+
+    private bool attackUIisOn = true;
+
+    public GameObject attackUI;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,6 +41,20 @@ public class ToggleHitBoxes : MonoBehaviour
             {
                 hurtBox?.MeshEnable(true);
             }
+        }
+    }
+
+    public void ToggleAttackUI()
+    {
+        if(attackUIisOn)
+        {
+            attackUIisOn = false;
+            attackUI.SetActive(false);
+        }
+        else
+        {
+            attackUIisOn = true;
+            attackUI.SetActive(true);
         }
     }
 }

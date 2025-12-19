@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using Slider = UnityEngine.UI.Slider;
 
@@ -33,6 +34,7 @@ public class BaseCharacter : MonoBehaviour
     [Header("UI")] [SerializeField] 
     private Slider healthBar;
     public float healthBarSpeed;
+    public TextMeshProUGUI attackNameText;
 
 
     [Header("Damage Numbers")] 
@@ -84,6 +86,7 @@ public class BaseCharacter : MonoBehaviour
             Move(false);
             m_anim.SetBool($"IsMoving",true);
             m_anim.SetBool($"MovingBack", false);
+            
         }
         else if (Input.GetKey(KeyCode.A) & canMove)
         {
@@ -101,6 +104,7 @@ public class BaseCharacter : MonoBehaviour
             isAttacking = true;
             canMove = false;
             m_anim.SetTrigger($"UpAttack");
+            if(attackNameText) attackNameText.text = "ATTACK_UP";
         }
 
         if (Input.GetKeyDown(KeyCode.W) & !isAttacking)
@@ -108,6 +112,7 @@ public class BaseCharacter : MonoBehaviour
             isAttacking = true;
             canMove = false;
             m_anim.SetTrigger($"MidAttack");
+            if(attackNameText) attackNameText.text = "ATTACK_MID";
         }
 
         if (Input.GetKeyDown(KeyCode.E) & !isAttacking)
@@ -115,6 +120,7 @@ public class BaseCharacter : MonoBehaviour
             isAttacking = true;
             canMove = false;
             m_anim.SetTrigger($"DownAttack");
+            if(attackNameText) attackNameText.text = "ATTACK_DOWN";
         }
     }
 
@@ -172,6 +178,8 @@ public class BaseCharacter : MonoBehaviour
     {
         canMove = true;
         isAttacking = false;
+       
+        if(attackNameText) attackNameText.text = "";
     }
 
     private void Move(bool backMovement)
