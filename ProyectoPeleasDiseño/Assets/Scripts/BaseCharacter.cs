@@ -306,6 +306,7 @@ public class BaseCharacter : MonoBehaviour
             currentHealth -= (hurtBox.mDamage - (hurtBox.mDamage * defense));
             if(num) num.SetText($"-{hurtBox.mDamage}");
             if (currentHealth <= 0) Death();
+            EndAttack();
         }  
     }
 
