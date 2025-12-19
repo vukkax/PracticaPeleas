@@ -9,7 +9,7 @@ public class BaseCharacter : MonoBehaviour
     public float moveSpeed = 5;
     private bool isAttacking = false;
     public float attackDamage = 1.15f;
-    [Range(0,1)]public float defense;
+    [Range(-1,1)]public float defense;
     public float maxHealth = 150;
     [SerializeField] private float currentHealth;
     private bool isDead;

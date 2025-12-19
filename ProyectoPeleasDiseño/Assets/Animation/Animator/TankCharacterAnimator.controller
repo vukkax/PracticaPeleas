@@ -525,7 +525,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Tank Dying
+  m_Name: Death
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -538,7 +538,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6370f1cf3c64acf4690fb5e1eb3ecfd4, type: 2}
+  m_Motion: {fileID: -203655887218126122, guid: 644b4316c67f3d345bff0b310c313015, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
