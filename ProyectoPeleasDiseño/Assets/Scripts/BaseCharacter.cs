@@ -81,6 +81,7 @@ public class BaseCharacter : MonoBehaviour
     {
         healthBar.value = Mathf.Lerp(healthBar.value, currentHealth, healthBarSpeed * Time.deltaTime);
         if (isDummy) return;
+        if (isDead) return;
         if (Input.GetKey(KeyCode.D) & canMove)
         {
             Move(false);
