@@ -3187,6 +3187,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5976543376841986429, guid: 3a4811560b593fa4bb83e03542668ee7, type: 3}
     - target: {fileID: 5966010014088626575, guid: 5669ad958fd4df546aacab5ea2890dca, type: 3}
+      propertyPath: defense
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5966010014088626575, guid: 5669ad958fd4df546aacab5ea2890dca, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 2016412901}
@@ -3197,6 +3201,10 @@ PrefabInstance:
     - target: {fileID: 5966010014088626575, guid: 5669ad958fd4df546aacab5ea2890dca, type: 3}
       propertyPath: healthBarSpeed
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5966010014088626575, guid: 5669ad958fd4df546aacab5ea2890dca, type: 3}
+      propertyPath: midAttackDamage
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7857890350893821292, guid: 5669ad958fd4df546aacab5ea2890dca, type: 3}
       propertyPath: mCharacter
@@ -4357,6 +4365,10 @@ PrefabInstance:
       propertyPath: dmgNum
       value: 
       objectReference: {fileID: 5976543376841986429, guid: 3a4811560b593fa4bb83e03542668ee7, type: 3}
+    - target: {fileID: 8411544984512813396, guid: 564ff8825a196f548a57659051f372cf, type: 3}
+      propertyPath: defense
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 8411544984512813396, guid: 564ff8825a196f548a57659051f372cf, type: 3}
       propertyPath: healthBar
       value: 

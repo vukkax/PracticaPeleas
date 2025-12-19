@@ -305,7 +305,7 @@ public class BaseCharacter : MonoBehaviour
             m_anim.SetTrigger($"Hit");
             Debug.Log("Hit on height " + hurtBox.mHeight); 
             currentHealth -= (hurtBox.mDamage - (hurtBox.mDamage * defense));
-            if(num) num.SetText($"-{hurtBox.mDamage}");
+            if(num) num.SetText($"-{hurtBox.mDamage - (hurtBox.mDamage * defense)}");
             if (currentHealth <= 0) Death();
             EndAttack();
         }  
